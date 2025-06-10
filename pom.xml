@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>springAi_hello</module>
+        <module>springAi_function</module>
     </modules>
 
     <properties>
