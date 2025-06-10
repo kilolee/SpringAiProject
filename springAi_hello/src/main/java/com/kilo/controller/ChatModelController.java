@@ -3,7 +3,6 @@ package com.kilo.controller;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.ChatOptions;
-import org.springframework.ai.chat.prompt.DefaultChatOptionsBuilder;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +22,7 @@ public class ChatModelController {
     @GetMapping("/chatModel02")
     public String chatModel02 (@RequestParam("msg") String msg) {
         ChatResponse chatResponse = chatModel.call(
-                new Prompt(msg)
+                new Prompt(msg, ChatOptions.builder().model("deepseek-chat").temperature(0.8).build())
         );
         String text = chatResponse.getResult().getOutput().getText();
         return text;
