@@ -12,6 +12,7 @@
         <module>springAi_hello</module>
         <module>springAi_function</module>
         <module>springAi_alibaba</module>
+        <module>springAi_other</module>
     </modules>
 
     <properties>
