@@ -11,6 +11,7 @@
     <modules>
         <module>springAi_hello</module>
         <module>springAi_function</module>
+        <module>springAi_alibaba</module>
     </modules>
 
     <properties>
